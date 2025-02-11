@@ -36,3 +36,6 @@ range(penguins$flipper_length_mm, na.rm = T)
 ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(mapping = aes(color = species, shape = island), size = 2) +
   geom_smooth(method = "lm") + scale_color_colorblind()
+
+# use ggplot to plot a bar chart and a histogram (different geom types)
+ggplot(penguins, aes(x = species)) + geom_bar(mapping = aes(fill = island))
